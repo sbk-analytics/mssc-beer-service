@@ -1,0 +1,15 @@
+co\za\sbk\msscbeerservice\domain\Beer.class
+co\za\sbk\msscbeerservice\web\model\BeerStyleEnum.class
+co\za\sbk\msscbeerservice\web\model\BeerDto$BeerDtoBuilder.class
+co\za\sbk\msscbeerservice\web\controller\MvcExceptionHandler.class
+co\za\sbk\msscbeerservice\web\model\BeerDto.class
+co\za\sbk\msscbeerservice\domain\Beer$BeerBuilder.class
+co\za\sbk\msscbeerservice\repositories\BeerRepository.class
+co\za\sbk\msscbeerservice\web\mappers\BeerMapperImpl.class
+co\za\sbk\msscbeerservice\web\mappers\BeerMapper.class
+co\za\sbk\msscbeerservice\MsscBeerServiceApplication.class
+co\za\sbk\msscbeerservice\web\controller\BeerController.class
+co\za\sbk\msscbeerservice\web\model\BeerPageList.class
+co\za\sbk\msscbeerservice\web\mappers\BeerMapperDecorator.class
+co\za\sbk\msscbeerservice\web\mappers\DateMapper.class
+co\za\sbk\msscbeerservice\bootstrap\BeerLoader.class
