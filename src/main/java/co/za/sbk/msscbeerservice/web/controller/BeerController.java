@@ -1,6 +1,9 @@
 package co.za.sbk.msscbeerservice.web.controller;
 
+import co.za.sbk.msscbeerservice.services.BeerService;
 import co.za.sbk.msscbeerservice.web.model.BeerDto;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -12,26 +15,30 @@ import java.util.UUID;
 /**
  * @author Thato Seboko on 2021/02/04
  */
+
+@RequiredArgsConstructor
 @RequestMapping("/api/v1/beer")
 @RestController
 public class BeerController {
     
+    private final BeerService beerService;
+    
     @GetMapping("/{beerId}")
     public ResponseEntity<BeerDto> getBeerById(@PathVariable("beerId") UUID beerId) {
-        //TODO: impl
-        return new ResponseEntity<>(BeerDto.builder().build(), HttpStatus.OK);
+      
+        return new ResponseEntity<>(beerService.getById(beerId), HttpStatus.OK);
     }
     
     @PostMapping
-    public ResponseEntity saveBeer(@RequestBody @Validated BeerDto beerDto) {
-        //TODO: impl
-        return new ResponseEntity(HttpStatus.CREATED);
+    public ResponseEntity<BeerDto> saveBeer(@RequestBody @Validated BeerDto beerDto) {
+
+        return new ResponseEntity<>(beerService.saveNewBeer(beerDto), HttpStatus.CREATED);
     }
 
     @PutMapping("/{beerId}")
-    public ResponseEntity updateBeerById(@PathVariable("beerId") UUID beerId, @RequestBody @Validated BeerDto beerDto) {
-        //TODO: impl
-        return new ResponseEntity(HttpStatus.NO_CONTENT);
+    public ResponseEntity<BeerDto> updateBeerById(@PathVariable("beerId") UUID beerId, @RequestBody @Validated BeerDto beerDto) {
+        
+        return new ResponseEntity<>(beerService.updateById(beerId, beerDto), HttpStatus.NO_CONTENT);
     }
 
 }
