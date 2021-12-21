@@ -13,9 +13,9 @@ import java.math.BigDecimal;
 @Component
 public class BeerLoader implements CommandLineRunner {
 
-    public static final Long BEER_1_UPC = 34543L;
-    public static final Long BEER_2_UPC = 35345L;
-    public static final Long BEER_3_UPC = 56734L;
+    public static final String BEER_1_UPC = "0631234200036";
+    public static final String BEER_2_UPC = "0631234300019";
+    public static final String BEER_3_UPC = "0083783375213";
 
     private final BeerRepository beerRepository;
 

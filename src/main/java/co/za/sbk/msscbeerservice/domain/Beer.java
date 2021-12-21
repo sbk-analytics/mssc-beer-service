@@ -37,7 +37,7 @@ public class Beer {
     private String beerStyle;
     
     @Column(nullable = true)
-    private Long upc;
+    private String upc;
     
     private BigDecimal price;
     
